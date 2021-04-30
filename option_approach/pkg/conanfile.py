@@ -11,7 +11,8 @@ class PkgConan(ConanFile):
     def build(self):
         # The build can actually do stuff with it!
         # here we need self.options.hardware to be a full path
-        self.output.info(load(str(self.options.hardware)))
+        self.output.info("-----------------------\n" + load(str(self.options.hardware)))
+        self.output.info("-----------------------")
 
     def package_id(self):
         # We make the package_id to depend only on the filename, no path
